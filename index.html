@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Product</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .display{
+            height: 500px;
+            width: 600px;
+            display: block;
+            margin: 10px auto;
+            object-fit: cover;
+            border: 2px solid black;
+            border-radius: 20px;
+         }
+         .bird{
+            height:90px;
+            width: 100px;
+            border-radius: 15px;
+            border: 1px solid black;
+             margin: 10px;
+         }
+         .bird-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+           
+         }
+         .bird:hover{
+            cursor: pointer;
+            box-shadow: 0 0 20px 0 rgb(6, 243, 116);
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./images/kingfisher.jpg" alt="kingfisher" class="display" id="display"/>
+    </div>
+    <div class="bird-container">
+        <img src="./images/parrot.jpg" alt="parrot" class="bird" onclick="changeImg('one')"/>
+        <img src="./images/eagle.jpg" alt="eagle" class="bird" onclick="changeImg('two')"/>
+        <img src="./images/peacock.jpg" alt="peacock" class="bird" onclick="changeImg('three')"/>
+        <img src="./images/kingfisher.jpg" alt="kingfisher" class="bird" onclick="changeImg('four')"/>
+        <img src="./images/colorful.jpg" alt="colorful" class="bird" onclick="changeImg(5)"/>
+    </div>
+</body>
+<script>
+    const displayImg=document.getElementById("display");
+    function changeImg(num){
+        if(num=='one'){
+        displayImg.src="./images/parrot.jpg";
+        }
+        else if(num=='two'){
+            displayImg.src="./images/eagle.jpg";
+        }
+         else if(num=='three'){
+            displayImg.src="./images/peacock.jpg";
+        }
+         else if(num=='four'){
+            displayImg.src="./images/kingfisher.jpg";
+        }
+         else if(num==5){
+            displayImg.src="./images/colorful.jpg";
+        }
+        else{
+            displayImg.src="./images/kingfisher.jpg";
+        }
+    }
+</script>
+</html>
